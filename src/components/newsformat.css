@@ -1,0 +1,36 @@
+.news-app {
+  display: flex;
+  justify-content: center;
+}
+
+.news-item {
+  width: 100%;
+  padding: 10px;
+  border: 1px whitesmoke;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.news-img {
+  width: 600px;
+  border-radius: 10px;
+}
+.newsArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 20px;
+
+  width: 700px;
+}
+.input {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  border: unset;
+  height: 30px;
+}

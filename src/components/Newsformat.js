@@ -1,7 +1,7 @@
 import React from 'react'
-import './newsItem.css'
+import './newsformat.css'
 
-const NewsItem = ({ title, description, url, urlToImage }) => {
+const Newsformat = ({ title, description, url, urlToImage }) => {
     return (
         <div className="news-app">
             <div className='news-item'>
@@ -13,4 +13,4 @@ const NewsItem = ({ title, description, url, urlToImage }) => {
     )
 }
 
-export default NewsItem
+export default Newsformat

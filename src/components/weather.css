@@ -1,0 +1,9 @@
+.container {
+  border: 1px whitesmoke;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  height: 500px;
+  margin: 10px;
+  width: 40%;
+  margin-top: 80px;
+}

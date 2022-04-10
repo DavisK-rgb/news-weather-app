@@ -1,11 +1,17 @@
 import './App.css';
 import { NewsList } from './components'
-import Iframe from 'react-iframe'
+import Weather from './components/Weather'
+import React, { useState } from 'react'
 function App() {
+  
   return (
-    <div className="App">
+    <div className='App'>
+  <div className='content'>
+  <NewsList  />
+       <Weather />
 
-      <NewsList />
+  </div>
+       
     </div>
   );
 }

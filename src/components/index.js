@@ -1,2 +1,2 @@
-export { default as NewsItem } from './NewsItem'
-export { default as NewsList } from './NewsList'
+export { default as NewsItem } from './Newsformat'
+export { default as NewsList } from './News'
