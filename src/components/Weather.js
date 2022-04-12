@@ -12,6 +12,7 @@ import './weather.css'
   const [area,setArea]= useState('')
   const [description,setDescription]=useState('')
   const [icon,setIcon]=useState('')
+  const [icon1,setIcon1]=useState('')
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -29,6 +30,7 @@ import './weather.css'
      setArea(response.data.timezone)
      setDescription(response.data.current.weather[0].description)
      setIcon(response.data.current.weather[0].icon)
+     setIcon1(forecast[0].weather[0].icon)
 
 
     })
@@ -67,7 +69,7 @@ import './weather.css'
           {description? <h3>{description}</h3> : null}
 
           </div>
-          <img src = {`http://openweathermap.org/img/w/${icon}.png`}/>
+          <img  alt=''  src = {`http://openweathermap.org/img/w/${icon}.png`}/>
           <h2 style={{color:'deepskyblue',}} >Tomorrows weather</h2>
           <div className="forecast">
             {forecast[0]? <p> {forecast[0].weather[0].main} </p> : null}
@@ -75,7 +77,7 @@ import './weather.css'
           <div className="forecast">
             {forecast[0]? <p style={{color:'cadetblue'}}> ({forecast[0].weather[0].description})</p> : null}
           </div>
-          <img  src ={`http://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`}  />
+          <img alt='' src ={`http://openweathermap.org/img/w/${icon1}.png`}  />
        
         </div>
 

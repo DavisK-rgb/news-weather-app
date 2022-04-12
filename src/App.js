@@ -8,7 +8,7 @@ function App() {
     <div className='App'>
   <div className='content'>
   <NewsList  />
-       <Weather />
+       <Weather/>
 
   </div>
        
