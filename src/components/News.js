@@ -12,7 +12,7 @@ const News = (props) => {
     useEffect(() => {
         const getArticles = async () => {
            
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=${encodeURIComponent(news)}&apiKey=2792ad6e6b0b43faaa170adbb093b646`)
+            const response = await axios.get(`https://newsapi.org/v2/everything?q=${encodeURIComponent(news)}&apiKey=${process.env.REACT_APP_NEWS}`)
             setArticles(response.data.articles)
             console.log(response)
         }

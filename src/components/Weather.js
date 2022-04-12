@@ -17,6 +17,7 @@ import './weather.css'
     navigator.geolocation.getCurrentPosition((position)=>{
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
+      console.log(process.env.REACT_APP_WEATHER)
       setLatitude(position.coords.latitude)
       setLongitude(position.coords.longitude)
 
@@ -38,7 +39,7 @@ import './weather.css'
 
   
   //const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=63cd63eee956507fde2c3f5f1419b7d2`
-  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=63cd63eee956507fde2c3f5f1419b7d2`
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${process.env.REACT_APP_WEATHER}`
  
  
   
