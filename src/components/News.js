@@ -47,7 +47,7 @@ const News = (props) => {
           onKeyPress={searchNews}
           placeholder='search for news'
           type="text" />
-           <h3>The headlines</h3>
+           <h3 >The headlines</h3>
              
             {articles.map(article => {
                 return(

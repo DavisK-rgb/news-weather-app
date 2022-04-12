@@ -15,9 +15,7 @@ import './weather.css'
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position)=>{
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-      console.log(process.env.REACT_APP_WEATHER)
+      
       setLatitude(position.coords.latitude)
       setLongitude(position.coords.longitude)
 
@@ -38,7 +36,7 @@ import './weather.css'
 }, [])
 
   
-  //const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=63cd63eee956507fde2c3f5f1419b7d2`
+  
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${process.env.REACT_APP_WEATHER}`
  
  
@@ -70,9 +68,14 @@ import './weather.css'
 
           </div>
           <img src = {`http://openweathermap.org/img/w/${icon}.png`}/>
+          <h2 style={{color:'deepskyblue',}} >Tomorrows weather</h2>
           <div className="forecast">
-            {forecast[0]? <p>Tomorrow's weather: {forecast[0].weather[0].main} ({forecast[0].weather[0].description})</p> : null}
+            {forecast[0]? <p> {forecast[0].weather[0].main} </p> : null}
           </div>
+          <div className="forecast">
+            {forecast[0]? <p style={{color:'cadetblue'}}> ({forecast[0].weather[0].description})</p> : null}
+          </div>
+          <img  src ={`http://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`}  />
        
         </div>
 
